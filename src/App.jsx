@@ -170,7 +170,7 @@ function App() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-gray-900' : 'bg-gray-50'}`}>
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md ${darkMode ? 'bg-gray-900/80' : 'bg-white/80'} shadow-sm`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b ${darkMode ? 'bg-gray-900/30 border-white/10' : 'bg-white/30 border-white/20'} shadow-lg`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -247,12 +247,15 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left animate-fade-in">
-              <p className={`text-lg mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`}>Hello, I'm</p>
-              <h1 className={`text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                John Doe
+              <p className={`text-xl mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`}>Hello, I'm</p>
+              <h1 className={`text-5xl sm:text-6xl lg:text-7xl font-bold mb-1 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                Ashen
               </h1>
-              <p className={`text-xl sm:text-2xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-xl mx-auto lg:mx-0`}>
-                Full Stack Developer specializing in building exceptional digital experiences
+              <h1 className={`text-7xl sm:text-8xl lg:text-9xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                Edward
+              </h1>
+              <p className={`text-lg sm:text-xl mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-xl mx-auto lg:mx-0`}>
+                -- Full Stack Developer specializing in building exceptional digital experiences --
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 <button
@@ -322,7 +325,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+      <section id="about" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>About Me</h2>
@@ -376,7 +379,7 @@ function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+      <section id="experience" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Experience</h2>
@@ -414,7 +417,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+      <section id="projects" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>My Projects</h2>
@@ -428,7 +431,7 @@ function App() {
               <div
                 key={project.id}
                 className={`group rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl ${
-                  darkMode ? 'bg-gray-900' : 'bg-white'
+                  darkMode ? 'bg-gray-900' : 'bg-white/80 backdrop-blur-sm'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -483,7 +486,7 @@ function App() {
       </section>
 
       {/* Education & Certifications Section */}
-      <section id="education" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+      <section id="education" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <div className="text-center">
@@ -528,7 +531,7 @@ function App() {
                         <p className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>{item.school}</p>
                       </div>
                       <span className={`px-4 py-1 rounded-full text-sm font-medium ${
-                        darkMode ? 'bg-gray-700 text-gray-300' : 'bg-green-100 text-green-700'
+                        darkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                       }`}>
                         {item.year}
                       </span>
@@ -556,7 +559,7 @@ function App() {
                         <p className={`${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>{item.school}</p>
                       </div>
                       <span className={`px-4 py-1 rounded-full text-sm font-medium ${
-                        darkMode ? 'bg-gray-700 text-gray-300' : 'bg-purple-100 text-purple-700'
+                        darkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-700'
                       }`}>
                         {item.year}
                       </span>
@@ -570,7 +573,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+      <section id="contact" className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Contact Me</h2>
@@ -590,7 +593,7 @@ function App() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className={`p-8 rounded-2xl ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+              <form onSubmit={handleSubmit} className={`p-8 rounded-2xl ${darkMode ? 'bg-gray-900' : 'bg-white/80 backdrop-blur-sm border border-rose-200'}`}>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -605,7 +608,7 @@ function App() {
                       className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                         darkMode 
                           ? 'bg-gray-800 border-gray-700 text-white focus:border-blue-500' 
-                          : 'bg-white border-gray-200 text-gray-900 focus:border-blue-500'
+                          : 'bg-rose-50 border-rose-200 text-gray-900 focus:border-rose-400'
                       } focus:outline-none`}
                       placeholder="Your name"
                     />
@@ -623,7 +626,7 @@ function App() {
                       className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                         darkMode 
                           ? 'bg-gray-800 border-gray-700 text-white focus:border-blue-500' 
-                          : 'bg-white border-gray-200 text-gray-900 focus:border-blue-500'
+                          : 'bg-rose-50 border-rose-200 text-gray-900 focus:border-rose-400'
                       } focus:outline-none`}
                       placeholder="your@email.com"
                     />
@@ -642,7 +645,7 @@ function App() {
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
                       darkMode 
                         ? 'bg-gray-800 border-gray-700 text-white focus:border-blue-500' 
-                        : 'bg-white border-gray-200 text-gray-900 focus:border-blue-500'
+                        : 'bg-rose-50 border-rose-200 text-gray-900 focus:border-rose-400'
                     } focus:outline-none`}
                     placeholder="Project inquiry"
                   />
@@ -660,7 +663,7 @@ function App() {
                     className={`w-full px-4 py-3 rounded-lg border-2 transition-colors resize-none ${
                       darkMode 
                         ? 'bg-gray-800 border-gray-700 text-white focus:border-blue-500' 
-                        : 'bg-white border-gray-200 text-gray-900 focus:border-blue-500'
+                        : 'bg-rose-50 border-rose-200 text-gray-900 focus:border-rose-400'
                     } focus:outline-none`}
                     placeholder="Tell me about your project..."
                   />
